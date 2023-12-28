@@ -1,4 +1,5 @@
 -- init database
+
 CREATE TABLE todos (
   	id INT GENERATED ALWAYS AS IDENTITY,
 	name VARCHAR ( 50 )
@@ -10,6 +11,7 @@ CREATE TABLE todos_ref (
 );
 
 -- init data
+
 INSERT INTO todos(name)
 VALUES('a'), ('b'), ('c');
 
@@ -17,6 +19,7 @@ INSERT INTO todos_ref(id, id_ref)
 VALUES(1, 2), (1, 3) ,(2,3);
 
 -- topological_graph
+
 WITH
 	RECURSIVE recursive_depth_calculator as (
 		SELECT 
